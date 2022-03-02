@@ -51,8 +51,8 @@ namespace Exercise
             int data4 = queue.Peek();
 
 
-            // 아래 방식은 막 가져다 쓰기는 편하나 속도와 가시성에서 효율성이 떨어지기 때문에
-            // Stack과 Queue를 사용해야한다.
+            // 아래 방식은 막 가져다 쓰기는 편하나 속도와 가시성에서 효율성이 떨어지기 때문에 Stack과 Queue를 사용해야한다.
+            // The contents below are convenient to use but less effective then Stack & Queue
             LinkedList<int> list = new LinkedList<int>();
             
             list.AddLast(101);
