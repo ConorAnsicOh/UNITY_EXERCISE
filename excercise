@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic; // when use Class Stack and Queue
+
+namespace Exercise
+{
+
+
+    // 스택 : LIFO ( 후입 선출 Last in Frist out )
+    // 큐 : FIFO ( 선입 선출 First in First out )
+
+    // [1] [2] [3] [4] - > [ 주차장 입구 ]
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Stack<int> stack = new Stack<int>();
+
+            stack.Push(101);
+            stack.Push(102);
+            stack.Push(103);
+            stack.Push(104);
+            stack.Push(105);
+            
+            if (  )
+            {
+            
+            }
+            // 비어있는 상태에서 Pop또는 Peek을 하면 에러가 발생함.
+            int data = stack.Pop();
+            int data2 = stack.Peek();
+
+            Queue<int> queue = new Queue<int>();
+
+            queue.Enqueue(101);
+            queue.Enqueue(102);
+            queue.Enqueue(103);
+            queue.Enqueue(104);
+            queue.Enqueue(105);
+
+            int data3 = queue.Dequeue();
+            int data4 = queue.Peek();
+        }
+    }
+}
