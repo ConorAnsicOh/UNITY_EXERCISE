@@ -1,5 +1,5 @@
 using System;
-using System.Collections.Generic; // when use Class Stack and Queue
+using System.Collections.Generic;
 
 namespace Exercise
 {
@@ -14,6 +14,9 @@ namespace Exercise
     {
         static void Main(string[] args)
         {
+            // 스택과 큐를 쓰는 이유는 팀 웍 코딩에 가시성 도움을 주기 때문.
+            // Using Stack & Queue helps program with your team members.
+
             Stack<int> stack = new Stack<int>();
 
             stack.Push(101);
@@ -21,12 +24,18 @@ namespace Exercise
             stack.Push(103);
             stack.Push(104);
             stack.Push(105);
-            
-            if (  )
-            {
-            
-            }
+
             // 비어있는 상태에서 Pop또는 Peek을 하면 에러가 발생함.
+            // If you use POP or PEEK while empty, an error occurs.
+            // int data = stack.Pop();
+            // int data2 = stack.Peek();
+            // so change this.
+            if ( stack.Count > 0 )
+            {
+                int data = stack.Pop();
+                int data2 = stack.Peek();
+
+            }
             int data = stack.Pop();
             int data2 = stack.Peek();
 
@@ -40,6 +49,25 @@ namespace Exercise
 
             int data3 = queue.Dequeue();
             int data4 = queue.Peek();
+
+
+            // 아래 방식은 막 가져다 쓰기는 편하나 속도와 가시성에서 효율성이 떨어지기 때문에
+            // Stack과 Queue를 사용해야한다.
+            LinkedList<int> list = new LinkedList<int>();
+            
+            list.AddLast(101);
+            list.AddLast(102);
+            list.AddLast(103);
+            list.AddLast(104);
+            list.AddLast(105);
+
+            // FIFO
+            int data5 = list.First.Value;
+            list.RemoveFirst();
+
+            // LIFO
+            int data6 = list.Last.Value;
+            list.RemoveLast();
         }
     }
 }
