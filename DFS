@@ -70,6 +70,18 @@ namespace Exercise
         }
 
         }
+
+        public void SearchAll()
+        {
+            visited = new bool[6];
+            for ( int now = 0; now < 6; now++ )
+            {
+                if ( visited[now] == false )
+                {
+                    DFS(now);
+                }
+            }
+        }
     }
 
     class Program
